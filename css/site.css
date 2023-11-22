@@ -44,18 +44,13 @@ footer .social > a:hover {
   color: var(--secondary);
 }
 
-.img-container {
-  position: relative;
+.logoFont {
+  font-family: 'Black Ops One',serif;
 }
 
-.counter-app-img {
-  position: absolute;
-  top: 2%;
-  left: 40%;
-  width: 20%;
-  
+.main-img {
+  filter: brightness(0.1) contrast(0.8) filedrop(NaN) blur(0.9px) sepia(0.31) hue-rotate(85deg) grayscale(0.4) invert(0.06);
 }
-
 .bsicon {
   color: purple;
 }
@@ -83,6 +78,20 @@ pre[class*="language-"] {
   word-wrap: break-word;
 }
 
+.Fizz {
+  color: darkgreen;
+  font-weight: 600;
+}
+
+.Buzz {
+  color: darkblue;
+  font-weight: 600;
+}
+
+.FizzBuzz {
+  color: red;
+  font-weight: 900;
+}
 .sticky-footer {
   position: sticky;
   left: 0;

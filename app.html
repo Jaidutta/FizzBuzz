@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-  <title>App Name: A Coding Project By Joy Dutta</title>
+  <title>FizzBuzz: A Coding Project By Joy Dutta</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,6 +10,11 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
@@ -25,8 +30,8 @@
   <!-- ==== Nav Section ==== -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="./img/White logo - no background.svg" alt="Brand logo color background"
-          width="30" height="24" class="d-inline-block align-text-top">APP NAME</img></a>
+      <a class="navbar-brand logoFont" href="#"><img src="./img/White logo - no background.svg" alt="Brand logo color background"
+          width="30" height="24" class="d-inline-block align-text-top mx-3">FizzBuzz</img></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -53,10 +58,45 @@
     </div>
   </nav>
 
-   <!-- ==== Nav Section ==== -->
-   <main class="flex-shrink-0">
+   <!-- ==== Main Section ==== -->
+  <main class="flex-shrink-0">
     <div class="container">
-      
+      <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col-lg-4 border-end border-2">
+          <h2 class="fw-bold lh-1 mb-3 mt-1">FizzBuzz App: A coding project</h2>
+          <h5>When it counts you fizzbuzz. A Javascript coding exercise using loops and DOM manipulation. Write a programme that prints the numbers from 1 to 100 and for multiples of '3' displays 'Fizz' instead of the number and for the multiples of '5' displays 'Buzz'. If the number is a multiple of both, it displays 'FizzBuzz'. The programme has the flexibility to change the numbers to any other numbers, instead of just 3 and 5</h5>
+          <section>
+            <h2 class="border-bottom border-2 mt-1">Instructions</h2>
+            <p>Enter a couple values to represent the fizz value and buzz value</p>
+          </section>
+        </div>
+        <div class="col-lg-8">
+          <h5>Enter values</h5>
+          <form action="" class="row gx-2 gy-2">
+            
+              <div class="col">
+                <input type="number" class="form-control" id="fizzValue" placeholder="Fizz value" value="3">
+              </div>
+              <div class="col">
+                <input type="number" class="form-control" id="buzzValue" placeholder="Buzz value" value="5">
+                
+              </div>
+              <div class="row-12">
+                <button type="button" class="btn btn-danger" id="btnSubmit">Display the Count!</button>
+              </div>
+            
+          </form>
+          <h2 class="mt-4 text-info fw-bolder border-bottom border-info border-3">Results</h2>
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <tbody id="results">
+                <!-- Results Go Here -->
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -66,13 +106,13 @@
       <div class="row row-cols-1 row-cols-lg-3 gy-2">
         <div class="col text-light order-last order-lg-first">
           <div>
-            <span class="text-muted">&copy;2023</span>Joy Dutta | dutta_joy@hotmail.com
+            <span class="text-muted">&copy;2023</span>&nbsp;Joy Dutta | dutta_joy@hotmail.com
           </div>
         </div>
         <div class="col d-flex justify-content-start justify-content-lg-center">
           <img src="./img/White logo - no background.svg" alt="" height="35">
         </div>
-        <div class="col d-flex justify-content-start justify-content-lg-end algin-items-center border border-success">
+        <div class="col d-flex justify-content-start justify-content-lg-end algin-items-center">
           <div class="row">
             <div class="col social">
               <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
@@ -91,12 +131,24 @@
       </div>
     </div>
   </footer>
-
+  
+    <template id="fbTemplate">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
    <!-- Bootstrap JS -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
  </script>
  <script src="js/site.js"></script>
+ <script>
+  document.getElementById("btnSubmit").addEventListener("click",getValues)
+ </script>
 </body>
 
 </html>
